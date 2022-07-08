@@ -1,2 +1,2 @@
 aframe.js testing for me.  
-No permission granted to use as org.
+Copy to use is forbidden.
