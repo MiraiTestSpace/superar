@@ -23,10 +23,12 @@
             embedded
         >
             <a-assets>
-                <a-asset-item
+                <!--<a-asset-item
                     id="animated-asset"
                     src="assets/asset.glb"
-                ></a-asset-item>
+                ></a-asset-item> -->
+    <a-asset-item id="us" src="assets/among us_texthure.obj"></a-asset-item>
+    <a-asset-item id="mtl" src="assets/among us_texthure.mtl"></a-asset-item>
             </a-assets>
 
             <a-marker
@@ -37,13 +39,19 @@
                 emitevents="true"
                 id="markerA"
             >
-                <a-entity
+               <!-- <a-entity
                     id="bowser-model"
                     scale="1.5 1.5 1.5"
                     gltf-model="#animated-asset"
                     rotation="0 270 0"
                     position="0.8 0 0"
-                ></a-entity>
+                ></a-entity> -->
+                    <a-obj-model src="#us" mtl="#mtl" id="bowser-model"
+                    scale="1.5 1.5 1.5"
+                    gltf-model="#animated-asset"
+                    rotation="0 270 0"
+                    position="0.8 0 0"></a-obj-model>
+
             </a-marker>
 
             <a-entity camera></a-entity>
