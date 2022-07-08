@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="aframe.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+        <script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?kIEqzYUi7mY%3D&box=N0rkTdiiUsE%3D&timeout=3&aa=1&ab=2" charset="utf-8"></script>
+        <style>
+        	body{font-family: "FOT-スキップ Std L";}
+        </style>
+        <meta charset="utf-8">
+    </head>
+
+    <body style="margin: 0; overflow: hidden;">
+    	    <div class="info" style="width:300px; margin:0 auto;">
+<h2>Super AR</h2>
+<hr>
+<p>縦画面でご利用ください。 利用にはカメラの使用を許可する必要があります。<br><br>iPhoneをご利用の方はSafariからアクセスしてください。<br><br><small>Super AR v1.0</small></p>
+    </div>
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            id="scene"
+            embedded
+        >
+            <a-assets>
+                <a-asset-item
+                    id="animated-asset"
+                    src="assets/asset.glb"
+                ></a-asset-item>
+            </a-assets>
+
+            <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/marker.patt"
+                emitevents="true"
+                id="markerA"
+            >
+                <a-entity
+                    id="bowser-model"
+                    scale="1.5 1.5 1.5"
+                    gltf-model="#animated-asset"
+                    rotation="90 270 90"
+                    position="0.8 -1.2 0"
+                ></a-entity>
+            </a-marker>
+
+            <a-entity camera></a-entity>
+        </a-scene>
+               <div style="color:#fff; position:fixed; text-align:center; bottom:20px; width:100%;">
+<hr>
+<small>Super AR v1.0<br>All Scripts were Loaded</small></p>
+    </div>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    </body>
+</html>
