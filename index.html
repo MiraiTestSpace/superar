@@ -6,6 +6,8 @@
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
         <script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?kIEqzYUi7mY%3D&box=N0rkTdiiUsE%3D&timeout=3&aa=1&ab=2" charset="utf-8"></script>
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+
         <style>
         	body{font-family: "FOT-スキップ Std L";}
         </style>
@@ -21,6 +23,7 @@
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
             embedded
+               gesture-detector
         >
             <a-assets>
                 <a-asset-item
@@ -43,7 +46,8 @@
                     id="bowser-model"
                     scale="0.5 0.5 0.5" gltf-model="#animated-asset" rotation="-75 10 0" position="0 0 0" material="" obj-model=""
                 ></a-entity> -->
-<a-obj-model src="#us" mtl="#mtl" id="bowser-model" scale="0.5 0.5 0.5" gltf-model="#animated-asset" rotation="-75 10 0" position="0 0 0" material="" obj-model=""></a-obj-model>
+<a-obj-model src="#us" mtl="#mtl" id="bowser-model" scale="0.5 0.5 0.5" gltf-model="#animated-asset" rotation="-75 10 0" position="0 0 0" material="" obj-model=""       class="clickable"
+      gesture-handler="minScale: 0.25; maxScale: 10"></a-obj-model>
             </a-marker>
 <a-entity light="color: #FFF; intensity: 1.5" position="0 0 10"></a-entity>
             <a-entity camera></a-entity>
